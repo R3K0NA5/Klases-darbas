@@ -20,7 +20,7 @@ let menuo = "1" + o;
 let diena = "2" + i;
 let r = p + o + i;
 console.log(r);
-
+h
 /*let metai = 1990;
 let menuo = 10;
 let diena = 22;
