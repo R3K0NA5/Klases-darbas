@@ -26,7 +26,7 @@ let menuo = 10;
 let diena = 22;
 let liekanametai = metai % 10;
 let liekanamenuo = metai % 10;
-let liekanadiena = metai % 10;*/
+let liekanadiena = metai % 10;*
 
 
 
