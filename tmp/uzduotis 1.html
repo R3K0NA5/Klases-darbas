@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<h1>1</h1>
+<script>
+    {
+        let PI = 3.14;
+        let r = 15;
+        let ilgis = PI * r;
+        document.write('Apskritimo ilgis ' + ilgis);
+        window.alert('Apskritimo ilgis ' + ilgis);
+    }
+</script>
+<br>
+<script>
+    {
+        let PI = 3.14;
+        let r = 15;
+        let r2 = r * r;
+        let plotis = PI * r2;
+        document.write('Apskritimo plotis ' + plotis);
+    }
+</script>
+<h1>2</h1>
+<h2>Filtru budu</h2>
+<script>
+    {
+        let a = -5;
+        let b = 0;
+        let c = -4;
+        let d = 4;
+        let sankirta = a <= c; /*true*/
+        let interval1 = [a, -4, -3, -2, -1, b];
+        let interval2 = [c, -3, -2, -1, 0, 1, 2, 3, d];
+        const sankirtos_skaiciai = interval1.filter((element) => {
+            return interval2.includes(element);
+        })
+        document.write('Sankirta = ' + sankirta + ' Sankirtos skaiciai ' + sankirtos_skaiciai);
+    }
+</script>
+<h2>Math.min/Math.max budu</h2>
+<script>{
+    let a = -5;
+    let c = -4;
+    let sankirta = a <= c;
+    const arr1 = [-5, 0];
+    const arr2 = [-4, 4];
+    let arr1min = Math.min(...arr1);
+    let arr1max = Math.max(...arr1);
+    let arr2min = Math.min(...arr2);
+    let arr2max = Math.max(...arr2);
+    let minimalus = Math.max(arr1min, arr2min);
+    let maximalus = Math.min(arr1max, arr2max);
+    document.write('Sankirta: ' + sankirta + '. Nuo ' + minimalus + ' iki ' + maximalus + '.');
+}
+</script>
+<h1>3</h1>
+<script>
+    {
+        let vardas = "Vytenis ";
+        let pavarde = "Pavardenis";
+        let kursas = [1];
+        let kur_mokosi = "PHPU";
+        let pazymiu_masyvas = [7, 5, 5];
+        document.write(vardas + "<br>" + pavarde + "<br>" + kursas + "<br>" + kur_mokosi + "<br>" + pazymiu_masyvas);
+    }
+</script>
+<br>
+<script>
+    {
+        let vardas = "Tomas";
+        let pavarde = "Tomauskas";
+        let kursas = [4];
+        let kur_mokosi = "KTU";
+        let pazymiu_masyvas = [7, 4, 5];
+        document.write('"' + vardas + ' ' + pavarde + ' ' + 'mokosi' + ' ' + kur_mokosi + ', ' + kursas + ' kurse,' + ' jo pazymiai: [' + pazymiu_masyvas + '].' + '"');
+    }
+</script>
+<h1>4</h1>
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML =
+        "Prametro 'Tomas' tipas yra " + typeof "Tomas"
+        +
+        "<br>"
+        +
+        "Prametro 'Tomauskas' tipas yra " + typeof "Tomauskas"
+        +
+        "<br>"
+        +
+        "Prametro '[4]' tipas yra " + typeof [4]
+        +
+        "<br>"
+        +
+        "Prametro 'KTU' tipas yra " + typeof "KTU"
+        +
+        "<br>"
+        +
+        "Prametro '[7, 4, 5]' tipas yra " + typeof [7, 4, 5];
+</script>
+</body>
+</html>
