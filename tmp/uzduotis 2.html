@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>1</h3>
+    <script>
+        {
+            let a = ['A', 'B', '1', 1, 2, 'Vardas', '', [], null];
+            for (let i = 1; i < a.length; i += 2) {
+            document.write(a[i]);
+        }
+        }
+</script>
+<h3>2</h3>
+<script>
+    {
+        let a = ['A', 'B', '1', 1, 2, 'Vardas', '', [], null];
+        for (let i = 2; i < a.length; i += 3) {
+            document.write(a[i]);
+        }
+    }
+</script>
+<br>
+<script>
+    {
+        let a = ['A', 'B', '1', 1, 2, 'Vardas', '', [], null];
+        for (let i = 3; i < a.length; i += 4) {
+            document.write(a[i]);
+        }
+    }
+</script>
+<h3>3</h3>
+<script>
+    {
+        let a = ['A', 'B', '1', 1, 2, 'Vardas', '', [], null];
+        i = a.length;
+        while (i--) {
+            if (typeof a[i] === 'number') {
+                document.write(a[i])
+            }
+        }
+    }
+</script>
+<h3>4</h3>
+<script>
+    {
+        let a = ['A', 'B', '1', 1, 2, 'Vardas', '', [], null];
+        let objectCount = 0;
+        for (let i = 0; i < a.length; i++)
+            if (typeof a[i] === 'object') {
+                (objectCount++);
+            }
+        document.write(objectCount)
+    }
+</script>
+<h3>5</h3>
+<script>
+    {
+        let a = ['A', 'B', '1', 1, 2, 'Vardas', '', [], null];
+        for (let i = 0; i < a.length; i++)
+            if (typeof a[i] === 'string') {
+                document.write("-" + a[i])
+            }
+    }
+</script>
+</body>
+</html>

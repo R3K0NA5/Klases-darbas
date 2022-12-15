@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>1</h3>
+<script>
+    {
+        let vardas = "Tomas";
+        let pavarde = "Tomauskas";
+        let kursas = 4;
+        let kur_mokosi = "KTU";
+        let pazymiu_masyvas = [7, 4, 5];
+        document.write('"' + vardas + ' ' + pavarde + ' ' + 'mokosi' + ' ' + kur_mokosi + ', ' + kursas + ' kurse,' + ' jo pazymiai: [' + pazymiu_masyvas + '].' + '"');
+    }
+</script>
+<h3>2</h3>
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML =
+        "Prametro 'Tomas' tipas yra " + typeof "Tomas"
+        +
+        "<br>"
+        +
+        "Prametro 'Tomauskas' tipas yra " + typeof "Tomauskas"
+        +
+        "<br>"
+        +
+        "Prametro '4' tipas yra " + typeof 4
+        +
+        "<br>"
+        +
+        "Prametro 'KTU' tipas yra " + typeof "KTU"
+        +
+        "<br>"
+        +
+        "Prametro '[7, 4, 5]' tipas yra " + typeof [7, 4, 5];
+</script>
+<h3>3</h3>
+<script>
+    let studento_ojektas = ["Tomas", "Tomauskas", 4, "KTU", [7, 4, 5]];
+
+    console.log(studento_ojektas)
+</script>
+<h3> 4 ir 5</h3>
+<script>{
+    let studento_objektu_masyvas = {
+        vardas: 'Tomas',
+        pavarde: 'Tomauskas',
+        kursas: 4,
+        kur_mokosi: 'KTU',
+        pazymiu_masyvas: [7, 4, 5]
+    };
+    console.log(studento_objektu_masyvas.pazymiu_masyvas)
+}
+</script>
+<h3> 6</h3>
+<script>
+    {
+        let studento_objektu_masyvas = {
+            vardas: 'Tomas',
+            pavarde: 'Tomauskas',
+            kursas: 4,
+            kur_mokosi: 'KTU',
+            pazymiu_masyvas: [7, 4, 5]
+        };
+        console.log('"' + studento_objektu_masyvas.vardas + " " + studento_objektu_masyvas.pavarde + " mokosi " + studento_objektu_masyvas.kur_mokosi + ", " + studento_objektu_masyvas.kursas + " kurse, jo pazymiai: " + studento_objektu_masyvas.pazymiu_masyvas + '."');
+        console.log('"' + studento_objektu_masyvas["vardas"] + " " + studento_objektu_masyvas["pavarde"] + " mokosi " + studento_objektu_masyvas["kur_mokosi"] + ", " + studento_objektu_masyvas["kursas"] + " kurse, jo pazymiai: " + studento_objektu_masyvas["pazymiu_masyvas"] + '."')
+    }
+</script>
+<h3> 7 </h3>
+<div id="ats7"></div>
+<script>
+    {
+        let studento_objektu_masyvas = {
+            vardas: 'Tomas',
+            pavarde: 'Tomauskas',
+            kursas: 4,
+            kur_mokosi: 'KTU',
+            pazymiu_masyvas: [7, 4, 5]
+        };
+
+        let ats7 = document.getElementById('ats7');
+        for (let i = 0; i < studento_objektu_masyvas.pazymiu_masyvas.length; i++) {
+            ats7.innerHTML += studento_objektu_masyvas.pazymiu_masyvas[i];
+        }
+    }
+
+</script>
+<h3> 8 </h3>
+
+<script>
+    {
+        let studento_objektu_masyvas = {
+            vardas: 'Tomas',
+            pavarde: 'Tomauskas',
+            kursas: 4,
+            kur_mokosi: 'KTU',
+            pazymiu_masyvas: [7, 4, 5,]
+        };
+        let pakeltinumeriai
+        for (let i = 0; i < studento_objektu_masyvas.pazymiu_masyvas.length; i++) {
+            pakeltinumeriai = studento_objektu_masyvas.pazymiu_masyvas[i] + 1;
+            document.write(pakeltinumeriai)
+        }
+    }
+</script>
+<h3> 9 </h3>
+<script>
+    {
+        let studento_objektu_masyvas = {
+            vardas: 'Tomas',
+            pavarde: 'Tomauskas',
+            kursas: 4,
+            kur_mokosi: 'KTU',
+            pazymiu_masyvas: [7, 4, 5,]
+        };
+
+        let sum = 0;
+        for (let i = 0; i < studento_objektu_masyvas.pazymiu_masyvas.length; i++) {
+            sum += studento_objektu_masyvas.pazymiu_masyvas[i];
+
+        }
+        document.write(sum);
+    }
+</script>
+<h3> 10 </h3>
+<script>
+    {
+        let studento_objektu_masyvas = {
+            vardas: 'Tomas',
+            pavarde: 'Tomauskas',
+            kursas: 4,
+            kur_mokosi: 'KTU',
+            pazymiu_masyvas: [7, 4, 5,]
+        };
+
+        function multiplyvalues(from, to) {
+            var result = 0;
+            for(var i = from; i < to; i++) { result += (i * to);}
+            console.log(result);
+        }
+
+        let numeris = 0;
+        for (let i = 0; i < studento_objektu_masyvas.pazymiu_masyvas.length; i++) {
+            numeris = studento_objektu_masyvas.pazymiu_masyvas[i];
+            console.log(numeris)
+        }
+    }
+</script>
+</body>
+</html>
