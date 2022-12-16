@@ -1,0 +1,6 @@
+.sheets > div{
+    display: none;
+}
+#home {
+    display: block;
+}

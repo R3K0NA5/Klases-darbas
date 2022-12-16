@@ -44,37 +44,67 @@
 
     console.log(studento_ojektas)
 </script>
-<h3> 4 ir 5</h3>
+<h3> 4</h3>
+<div id="uzduotis4"></div>
 <script>{
-    let studento_objektu_masyvas = {
+    let studentas = {
         vardas: 'Tomas',
         pavarde: 'Tomauskas',
         kursas: 4,
         kur_mokosi: 'KTU',
         pazymiu_masyvas: [7, 4, 5]
     };
-    console.log(studento_objektu_masyvas.pazymiu_masyvas)
+
+    document.getElementById("uzduotis4").innerHTML = Object.values(studentas);
 }
 </script>
-<h3> 6</h3>
-<script>
-    {
-        let studento_objektu_masyvas = {
+<h3> 5</h3>
+<div id="uzduotis5"></div>
+
+<script>{
+    let studentai = [
+        {
             vardas: 'Tomas',
             pavarde: 'Tomauskas',
             kursas: 4,
             kur_mokosi: 'KTU',
             pazymiu_masyvas: [7, 4, 5]
-        };
-        console.log('"' + studento_objektu_masyvas.vardas + " " + studento_objektu_masyvas.pavarde + " mokosi " + studento_objektu_masyvas.kur_mokosi + ", " + studento_objektu_masyvas.kursas + " kurse, jo pazymiai: " + studento_objektu_masyvas.pazymiu_masyvas + '."');
-        console.log('"' + studento_objektu_masyvas["vardas"] + " " + studento_objektu_masyvas["pavarde"] + " mokosi " + studento_objektu_masyvas["kur_mokosi"] + ", " + studento_objektu_masyvas["kursas"] + " kurse, jo pazymiai: " + studento_objektu_masyvas["pazymiu_masyvas"] + '."')
+        }, {
+            vardas: 'vardas2',
+            pavarde: 'pavarde2',
+            kursas: 3,
+            kur_mokosi: 'KTU',
+            pazymiu_masyvas: [7, 2, 5]
+        }, {
+            vardas: 'vardas3',
+            pavarde: 'pavarde3',
+            kursas: 3,
+            kur_mokosi: 'KTU',
+            pazymiu_masyvas: [7, 3, 5]
+        }, {
+            vardas: 'vardas4',
+            pavarde: 'pavarde4',
+            kursas: 3,
+            kur_mokosi: 'KTU',
+            pazymiu_masyvas: [7, 3, 4]
+        }
+    ];
+    for(i=0;i < studentai.length; i++ ){
+        document.getElementById("uzduotis5").innerHTML += Object.values( studentai[i]) + '<br>';
+
+
     }
+
+
+}
 </script>
-<h3> 7 </h3>
-<div id="ats7"></div>
+<h3> 6</h3>
+<div id="dot"></div>
+<div id="bracket"></div>
+<p>pabandziau atspausdinti visu for each tik neradau kaip isspausdinti </p>
 <script>
     {
-        let studento_objektu_masyvas = {
+        let studentas = {
             vardas: 'Tomas',
             pavarde: 'Tomauskas',
             kursas: 4,
@@ -82,9 +112,61 @@
             pazymiu_masyvas: [7, 4, 5]
         };
 
-        let ats7 = document.getElementById('ats7');
-        for (let i = 0; i < studento_objektu_masyvas.pazymiu_masyvas.length; i++) {
-            ats7.innerHTML += studento_objektu_masyvas.pazymiu_masyvas[i];
+        document.getElementById("dot").innerHTML = ('"' + studentas.vardas + " " + studentas.pavarde + " mokosi " + studentas.kur_mokosi + ", " + studentas.kursas + " kurse, jo pazymiai: [" + studentas.pazymiu_masyvas + ']."');
+        document.getElementById("bracket").innerHTML = ('"' + studentas["vardas"] + " " + studentas["pavarde"] + " mokosi " + studentas["kur_mokosi"] + ", " + studentas["kursas"] + " kurse, jo pazymiai: [" + studentas["pazymiu_masyvas"] + ']."')
+
+    }
+
+    {
+    let studentai = [
+        {
+            vardas: 'Tomas',
+            pavarde: 'Tomauskas',
+            kursas: 4,
+            kur_mokosi: 'KTU',
+            pazymiu_masyvas: [7, 4, 5]
+        }, {
+            vardas: 'vardas2',
+            pavarde: 'pavarde2',
+            kursas: 3,
+            kur_mokosi: 'KTU',
+            pazymiu_masyvas: [7, 2, 5]
+        }, {
+            vardas: 'vardas3',
+            pavarde: 'pavarde3',
+            kursas: 3,
+            kur_mokosi: 'KTU',
+            pazymiu_masyvas: [7, 3, 5]
+        }, {
+            vardas: 'vardas4',
+            pavarde: 'pavarde4',
+            kursas: 3,
+            kur_mokosi: 'KTU',
+            pazymiu_masyvas: [7, 3, 4]
+        }
+    ];
+    studentai.forEach(value => {
+        let dotforeach = '"' + value.vardas + " " + value.pavarde + " mokosi " + value.kur_mokosi + ", " + value.kursas + " kurse, jo pazymiai: [" + value.pazymiu_masyvas + ']."';
+        document.write(dotforeach + '<br>')
+    })
+    }
+</script>
+<h3> 7 </h3>
+<div id="uzduotis7"></div>
+<script>
+    {
+        let studentas = {
+            vardas: 'Tomas',
+            pavarde: 'Tomauskas',
+            kursas: 4,
+            kur_mokosi: 'KTU',
+            pazymiu_masyvas: [7, 4, 5]
+        };
+
+        let uzduotis7 = document.getElementById('ats7');
+        for (let i = 0; i < studentas.pazymiu_masyvas.length; i++)
+        {
+            document.write(studentas.pazymiu_masyvas[i]);
         }
     }
 
@@ -118,15 +200,39 @@
             pazymiu_masyvas: [7, 4, 5,]
         };
 
-        let sum = 0;
-        for (let i = 0; i < studento_objektu_masyvas.pazymiu_masyvas.length; i++) {
-            sum += studento_objektu_masyvas.pazymiu_masyvas[i];
-
-        }
-        document.write(sum);
+        let sudetis = studento_objektu_masyvas.pazymiu_masyvas[0] + studento_objektu_masyvas.pazymiu_masyvas[1] + studento_objektu_masyvas.pazymiu_masyvas[2];
+        document.write(sudetis);
     }
 </script>
 <h3> 10 </h3>
+<script>{
+    let studento_objektu_masyvas = {
+        vardas: 'Tomas',
+        pavarde: 'Tomauskas',
+        kursas: 4,
+        kur_mokosi: 'KTU',
+        pazymiu_masyvas: [7, 4, 5,]
+    };
+
+    let daugyba = studento_objektu_masyvas.pazymiu_masyvas[0] * studento_objektu_masyvas.pazymiu_masyvas[2];
+    document.write(daugyba)
+}
+</script>
+<h3> 11 </h3>
+<p>console.log atsakymas = number</p>
+<script>{
+    let studento_objektu_masyvas = {
+        vardas: 'Tomas',
+        pavarde: 'Tomauskas',
+        kursas: 4,
+        kur_mokosi: 'KTU',
+        pazymiu_masyvas: [7, 4, 5,]
+    };
+
+    console.log(typeof studento_objektu_masyvas.kursas);
+}
+</script>
+<h3> 12 </h3>
 <script>
     {
         let studento_objektu_masyvas = {
@@ -136,19 +242,19 @@
             kur_mokosi: 'KTU',
             pazymiu_masyvas: [7, 4, 5,]
         };
+        let skaicius = studento_objektu_masyvas.kursas;
 
-        function multiplyvalues(from, to) {
-            var result = 0;
-            for(var i = from; i < to; i++) { result += (i * to);}
-            console.log(result);
-        }
-
-        let numeris = 0;
-        for (let i = 0; i < studento_objektu_masyvas.pazymiu_masyvas.length; i++) {
-            numeris = studento_objektu_masyvas.pazymiu_masyvas[i];
-            console.log(numeris)
+        if (typeof skaicius === 'number') {
+            document.write(skaicius + " yra numeris")
+        } else {
+            document.write(skaicius + "ne numeris")
         }
     }
+</script>
+<h3> 13 </h3>
+<script>
+
+
 </script>
 </body>
 </html>
