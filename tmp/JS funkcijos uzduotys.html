@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<h3>1</h3>
+<h3>2</h3>
 <script>
     {
         let vardas = "Tomas";
@@ -16,7 +16,7 @@
         document.write('"' + vardas + ' ' + pavarde + ' ' + 'mokosi' + ' ' + kur_mokosi + ', ' + kursas + ' kurse,' + ' jo pazymiai: [' + pazymiu_masyvas + '].' + '"');
     }
 </script>
-<h3>2</h3>
+<h3>3</h3>
 <p id="demo"></p>
 <script>
     document.getElementById("demo").innerHTML =
@@ -38,13 +38,7 @@
         +
         "Prametro '[7, 4, 5]' tipas yra " + typeof [7, 4, 5];
 </script>
-<h3>3</h3>
-<script>
-    let studento_ojektas = ["Tomas", "Tomauskas", 4, "KTU", [7, 4, 5]];
-
-    console.log(studento_ojektas)
-</script>
-<h3> 4</h3>
+<h3>4</h3>
 <div id="uzduotis4"></div>
 <script>{
     let studentas = {
@@ -89,35 +83,16 @@
             pazymiu_masyvas: [7, 3, 4]
         }
     ];
-    for(i=0;i < studentai.length; i++ ){
-        document.getElementById("uzduotis5").innerHTML += Object.values( studentai[i]) + '<br>';
+    for (i = 0; i < studentai.length; i++) {
+        document.getElementById("uzduotis5").innerHTML += Object.values(studentai[i]) + '<br>';
 
 
     }
-
-
 }
 </script>
-<h3> 6</h3>
-<div id="dot"></div>
-<div id="bracket"></div>
-<p>pabandziau atspausdinti visu for each tik neradau kaip isspausdinti </p>
-<script>
-    {
-        let studentas = {
-            vardas: 'Tomas',
-            pavarde: 'Tomauskas',
-            kursas: 4,
-            kur_mokosi: 'KTU',
-            pazymiu_masyvas: [7, 4, 5]
-        };
 
-        document.getElementById("dot").innerHTML = ('"' + studentas.vardas + " " + studentas.pavarde + " mokosi " + studentas.kur_mokosi + ", " + studentas.kursas + " kurse, jo pazymiai: [" + studentas.pazymiu_masyvas + ']."');
-        document.getElementById("bracket").innerHTML = ('"' + studentas["vardas"] + " " + studentas["pavarde"] + " mokosi " + studentas["kur_mokosi"] + ", " + studentas["kursas"] + " kurse, jo pazymiai: [" + studentas["pazymiu_masyvas"] + ']."')
-
-    }
-
-    {
+<h3>6 isspausdintas console log</h3>
+<script>{
     let studentai = [
         {
             vardas: 'Tomas',
@@ -145,13 +120,65 @@
             pazymiu_masyvas: [7, 3, 4]
         }
     ];
-    studentai.forEach(value => {
-        let dotforeach = '"' + value.vardas + " " + value.pavarde + " mokosi " + value.kur_mokosi + ", " + value.kursas + " kurse, jo pazymiai: [" + value.pazymiu_masyvas + ']."';
-        document.write(dotforeach + '<br>')
-    })
+    console.log(Object.values(studentai));
+
+}
+
+</script>
+<h3>7 </h3>
+<div id="dot"></div>
+<div id="bracket"></div>
+<p>pabandziau atspausdinti visu for each tik neradau kaip isspausdinti </p>
+<script>
+    {
+        let studentas = {
+            vardas: 'Tomas',
+            pavarde: 'Tomauskas',
+            kursas: 4,
+            kur_mokosi: 'KTU',
+            pazymiu_masyvas: [7, 4, 5]
+        };
+
+        document.getElementById("dot").innerHTML = ('"' + studentas.vardas + " " + studentas.pavarde + " mokosi " + studentas.kur_mokosi + ", " + studentas.kursas + " kurse, jo pazymiai: [" + studentas.pazymiu_masyvas + ']."');
+        document.getElementById("bracket").innerHTML = ('"' + studentas["vardas"] + " " + studentas["pavarde"] + " mokosi " + studentas["kur_mokosi"] + ", " + studentas["kursas"] + " kurse, jo pazymiai: [" + studentas["pazymiu_masyvas"] + ']."')
+
+    }
+
+    {
+        let studentai = [
+            {
+                vardas: 'Tomas',
+                pavarde: 'Tomauskas',
+                kursas: 4,
+                kur_mokosi: 'KTU',
+                pazymiu_masyvas: [7, 4, 5]
+            }, {
+                vardas: 'vardas2',
+                pavarde: 'pavarde2',
+                kursas: 3,
+                kur_mokosi: 'KTU',
+                pazymiu_masyvas: [7, 2, 5]
+            }, {
+                vardas: 'vardas3',
+                pavarde: 'pavarde3',
+                kursas: 3,
+                kur_mokosi: 'KTU',
+                pazymiu_masyvas: [7, 3, 5]
+            }, {
+                vardas: 'vardas4',
+                pavarde: 'pavarde4',
+                kursas: 3,
+                kur_mokosi: 'KTU',
+                pazymiu_masyvas: [7, 3, 4]
+            }
+        ];
+        studentai.forEach(value => {
+            let dotforeach = '"' + value.vardas + " " + value.pavarde + " mokosi " + value.kur_mokosi + ", " + value.kursas + " kurse, jo pazymiai: [" + value.pazymiu_masyvas + ']."';
+            document.write(dotforeach + '<br>')
+        })
     }
 </script>
-<h3> 7 </h3>
+<h3> 8 </h3>
 <div id="uzduotis7"></div>
 <script>
     {
@@ -164,14 +191,13 @@
         };
 
         let uzduotis7 = document.getElementById('ats7');
-        for (let i = 0; i < studentas.pazymiu_masyvas.length; i++)
-        {
+        for (let i = 0; i < studentas.pazymiu_masyvas.length; i++) {
             document.write(studentas.pazymiu_masyvas[i]);
         }
     }
 
 </script>
-<h3> 8 </h3>
+<h3> 9 </h3>
 
 <script>
     {
@@ -189,7 +215,7 @@
         }
     }
 </script>
-<h3> 9 </h3>
+<h3> 10 </h3>
 <script>
     {
         let studento_objektu_masyvas = {
@@ -204,7 +230,7 @@
         document.write(sudetis);
     }
 </script>
-<h3> 10 </h3>
+<h3> 11</h3>
 <script>{
     let studento_objektu_masyvas = {
         vardas: 'Tomas',
@@ -218,7 +244,7 @@
     document.write(daugyba)
 }
 </script>
-<h3> 11 </h3>
+<h3> 12 </h3>
 <p>console.log atsakymas = number</p>
 <script>{
     let studento_objektu_masyvas = {
@@ -232,7 +258,7 @@
     console.log(typeof studento_objektu_masyvas.kursas);
 }
 </script>
-<h3> 12 </h3>
+<h3> 13 </h3>
 <script>
     {
         let studento_objektu_masyvas = {
@@ -251,7 +277,7 @@
         }
     }
 </script>
-<h3> 13 </h3>
+<h3> 14 </h3>
 <script>
 
 
