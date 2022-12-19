@@ -129,6 +129,7 @@
 <div id="dot"></div>
 <div id="bracket"></div>
 <p>pabandziau atspausdinti visu for each tik neradau kaip isspausdinti </p>
+<div id="dotbr"></div>
 <script>
     {
         let studentas = {
@@ -172,10 +173,8 @@
                 pazymiu_masyvas: [7, 3, 4]
             }
         ];
-        studentai.forEach(value => {
-            let dotforeach = '"' + value.vardas + " " + value.pavarde + " mokosi " + value.kur_mokosi + ", " + value.kursas + " kurse, jo pazymiai: [" + value.pazymiu_masyvas + ']."';
-            document.write(dotforeach + '<br>')
-        })
+        studentai.forEach(value => {dotforeach = '"' + value.vardas + " " + value.pavarde + " mokosi " + value.kur_mokosi + ", " + value.kursas + " kurse, jo pazymiai: [" + value.pazymiu_masyvas + ']."';})
+        document.write(dotforeach + '<br>')
     }
 </script>
 <h3> 8 </h3>
